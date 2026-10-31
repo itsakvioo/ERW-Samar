@@ -30,7 +30,6 @@ app.get('/api/config', async (req, res) => {
       body: JSON.stringify({
         chat_id: TELEGRAM_CHANNEL_ID,
         creates_join_request: true, // Requires approval (stops fake clicks)
-        member_limit: 1             // Expires after 1 join (like premium tools)
       })
     });
     const tgData = await tgRes.json();
