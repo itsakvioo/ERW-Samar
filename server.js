@@ -29,7 +29,7 @@ app.get('/api/config', async (req, res) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         chat_id: TELEGRAM_CHANNEL_ID,
-        creates_join_request: true, // Requires approval (stops fake clicks)
+        creates_join_request: true, // Requires approval (stops fake clicks       
       })
     });
     const tgData = await tgRes.json();
@@ -87,7 +87,7 @@ async function sendMetaConversion(userId, tgUser) {
 
   const payload = {
     data: [{
-      event_name: 'Lead',
+      event_name: 'Subscribe',
       event_time: eventTime,
       action_source: 'website',
       user_data: { external_id: [externalId] },
